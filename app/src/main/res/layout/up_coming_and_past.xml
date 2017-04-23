@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/match_parent"
+
+        android:layout_marginLeft="@dimen/medium_text"
+        android:layout_marginRight="@dimen/medium_text"
+    android:orientation="vertical"
+        tools:context="com.example.android.basicconcept.MainViewPager">
+
+
+
+
+
+                <LinearLayout
+                    style="@style/match_wrap"
+
+
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_first"
+                        style="@style/match_wrap"
+                        android:layout_weight="1"
+                        android:text="@string/pending" />
+
+                    <Button
+                        android:id="@+id/btn_second"
+                        style="@style/match_wrap"
+                        android:layout_weight="1"
+                        android:text="@string/accept" />
+
+                </LinearLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager1"
+                    style="@style/match_wrap"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/medium_text"
+                    android:layout_marginRight="@dimen/medium_text"
+                     >
+                    </android.support.v4.view.ViewPager>
+
+
+
+
+    </LinearLayout>

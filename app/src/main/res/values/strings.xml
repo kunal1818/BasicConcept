@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BasicConcept</string>
+    <string name="splash_screen">Welcome</string>
+    <string name="upcoming">UPCOMING</string>
+    <string name="past">PAST</string>
+    <string name="pending">PENDING</string>
+    <string name="accept">Accept</string>
+</resources>
