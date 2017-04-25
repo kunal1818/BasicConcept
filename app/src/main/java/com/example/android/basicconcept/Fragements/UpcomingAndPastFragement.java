@@ -22,12 +22,16 @@ public class UpcomingAndPastFragement extends Fragment implements Constants {
     private Button btnLeft, btnRight;
     private ViewPager viewPager;
     private String mMode;
+    private Bundle mExtra;
 
     /**
+     *
      * @param mMode to set mode or set string UP_COMING or PAST.
+     * @param extra exrra
      */
-    public UpcomingAndPastFragement(final String mMode) {
+    public UpcomingAndPastFragement(final String mMode, final Bundle extra) {
         this.mMode = mMode;
+        this.mExtra = extra;
     }
 
 
@@ -92,9 +96,9 @@ public class UpcomingAndPastFragement extends Fragment implements Constants {
             @Override
             public Fragment getItem(final int position) {
                 if (position == 0) {
-                    return new PendingAcceptandCompleteCancel(UP_COMING);
+                    return new PendingAcceptandCompleteCancel(UP_COMING, mExtra);
                 } else {
-                    return new PendingAcceptandCompleteCancel(PAST);
+                    return new PendingAcceptandCompleteCancel(PAST, mExtra);
                 }
             }
 
@@ -106,5 +110,10 @@ public class UpcomingAndPastFragement extends Fragment implements Constants {
 
 
         return view;
+    }
+
+    @Override
+    public void extra() {
+
     }
 }

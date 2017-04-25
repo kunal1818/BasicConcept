@@ -17,6 +17,8 @@ import com.example.android.basicconcept.constants.Constants;
 public class MainViewPager extends AppCompatActivity implements Constants {
     private Button upcoming, past;
     private ViewPager vp;
+    private Bundle extra;
+
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class MainViewPager extends AppCompatActivity implements Constants {
         upcoming = (Button) findViewById(R.id.btn_upcoming);
         past = (Button) findViewById(R.id.btn_past);
         vp = (ViewPager) findViewById(R.id.viewpager);
+        extra = getIntent().getExtras();
        /* UP_COMING.setOnClickListener(new View.OnClickListener() {
             public void onClick(final View v) {
                 UP_COMING.setBackgroundResource(R.color.colorPrimaryDark);
@@ -71,9 +74,9 @@ public class MainViewPager extends AppCompatActivity implements Constants {
             public Fragment getItem(final int position) {
                 if (position == 0) {
 
-                    return new UpcomingAndPastFragement(Constants.UP_COMING);
+                    return new UpcomingAndPastFragement(Constants.UP_COMING, extra);
                 } else {
-                    return new UpcomingAndPastFragement(Constants.PAST);
+                    return new UpcomingAndPastFragement(Constants.PAST, extra);
 
                 }
 
@@ -86,6 +89,11 @@ public class MainViewPager extends AppCompatActivity implements Constants {
             }
         });
 
+
+    }
+
+    @Override
+    public void extra() {
 
     }
 }

@@ -3,6 +3,7 @@ package com.example.android.basicconcept.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -77,7 +78,12 @@ public class MainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         @Override
         public void onClick(final View v) {
+
             Intent intent = new Intent(context, MainViewPager.class);
+
+            Bundle bundle = new Bundle();
+            bundle.putParcelableArrayList("arraylist", modelArrayList);
+            intent.putExtras(bundle);
             context.startActivity(intent);
 
         }
